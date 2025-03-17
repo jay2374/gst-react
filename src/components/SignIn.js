@@ -13,6 +13,7 @@ const SignIn = ({ email, setEmail, password, setPassword, error, handleSignIn, o
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Origin':'https://dwlrpga2kd.execute-api.ap-south-1.amazonaws.com'
         },
         body: JSON.stringify({
           email,
