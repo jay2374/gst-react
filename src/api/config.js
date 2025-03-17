@@ -7,8 +7,8 @@ const getApiBaseUrl = () => {
 };
 
 export const endpoints = {
-  signup: `https://uut8pa1v3f.execute-api.ap-south-1.amazonaws.com/prod/api/signup`,
-  signin: `https://uut8pa1v3f.execute-api.ap-south-1.amazonaws.com/prod/api/signin`,
+  signup: `https://jcgubk2mxi.execute-api.ap-south-1.amazonaws.com/prod/api/signup`,
+  signin: `https://jcgubk2mxi.execute-api.ap-south-1.amazonaws.com/prod/api/signin`,
 };
 
 export default endpoints; 
