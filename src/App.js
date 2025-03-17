@@ -17,25 +17,39 @@ function App() {
   const [error, setError] = useState('');
   const [importedData, setImportedData] = useState(null);
 
-  const handleSignIn = (e) => {
+  const handleSignIn = (e, data, error) => {
     e.preventDefault();
-    if (email && password) {
+    if (error) {
+      setError(error);
+      return;
+    }
+
+    if (data) {
       setIsSignedIn(true);
       setError('');
       setShowSignIn(false);
       clearForm();
+      // You might want to store the user data or token in localStorage here
+      // localStorage.setItem('token', data.token);
     } else {
       setError('Please fill in all fields');
     }
   };
 
-  const handleSignUp = (e) => {
+  const handleSignUp = (e, data, error) => {
     e.preventDefault();
-    if (email && password && name) {
+    if (error) {
+      setError(error);
+      return;
+    }
+
+    if (data) {
       setIsSignedIn(true);
       setError('');
       setShowSignUp(false);
       clearForm();
+      // You might want to store the user data or token in localStorage here
+      // localStorage.setItem('token', data.token);
     } else {
       setError('Please fill in all fields');
     }
