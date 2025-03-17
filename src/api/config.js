@@ -1,8 +1,14 @@
-const API_BASE_URL = 'http://gst-node-alb-1327858446.ap-south-1.elb.amazonaws.com:8081'; // Replace with your actual API base URL
+const getApiBaseUrl = () => {
+  if (process.env.REACT_APP_API_URL) {
+    return process.env.REACT_APP_API_URL;
+  }
+  // Use HTTPS for production
+  return 'https://jht2s256ce.execute-api.ap-south-1.amazonaws.com';
+};
 
 export const endpoints = {
-  signup: 'http://gst-node-alb-1327858446.ap-south-1.elb.amazonaws.com:8081/api/signup',
-  signin: 'http://gst-node-alb-1327858446.ap-south-1.elb.amazonaws.com:8081/api/signin',
+  signup: `https://jht2s256ce.execute-api.ap-south-1.amazonaws.com/prod/api/signup`,
+  signin: `https://jht2s256ce.execute-api.ap-south-1.amazonaws.com/prod/api/signin`,
 };
 
 export default endpoints; 
