@@ -12,8 +12,7 @@ const SignUp = ({ name, setName, email, setEmail, password, setPassword, error, 
       const response = await fetch(endpoints.signup, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Origin':'https://dwlrpga2kd.execute-api.ap-south-1.amazonaws.com'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           name,
